@@ -1,0 +1,110 @@
+
+  <div class="version">
+
+    <button class="heading" (click)="expand($event)">JSE-6</button>
+    
+    <div class="features" [@listAnimation]="featuresArray.length" 
+                          [@heightAnimation]="{value:isExpanded? true : false, 
+                                                params: { poduvu:calculatedHeight , color:'lightcyan' , time:calculatedTime}
+                                              }">
+
+      <ul *ngFor="let features of featuresArray">
+        <li>
+            <i class="material-icons left" *ngIf="features.aStatus == 'notApplicable'">not_interested</i>
+            <i class="material-icons left" *ngIf="features.aStatus == 'enabled'">check_circle</i>
+            <i class="material-icons left" *ngIf="features.aStatus == 'Applicable'">done_all</i>
+            {{features.feature}}
+            <i class="material-icons right" *ngIf="features.sStatus == 'notApplicable'">not_interested</i>
+            <i class="material-icons right" *ngIf="features.sStatus == 'enabled'">check_circle</i>
+            <i class="material-icons right" *ngIf="features.sStatus == 'Applicable'">done_all</i>       
+         </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+<!--
+
+    <div [ngSwitch]="features.aStatus">
+               <i class="material-icons"  *ngSwitchCase="'notApplicable'">{{not_interested}}</i>
+               <i class="material-icons"  *ngSwitchCase="'Applicable'">{{done_all}}</i>
+               <i class="material-icons"  *ngSwitchCase="'enabled'">{{check_circle}}</i>
+            </div>
+             <div [ngSwitch]="features.sStatus">
+                 <i class="material-icons"  *ngSwitchCase="'notApplicable'">{{not_interested}}</i>
+                 <i class="material-icons"  *ngSwitchCase="'Applicable'">{{done_all}}</i>
+                 <i class="material-icons"  *ngSwitchCase="'enabled'">{{check_circle}}</i>
+            </div>
+          
+
+   <i class="material-icons" 
+             [ngClass]="{ 'not_interested' = ('features.aStatus'=='notApplicable'),
+                          'done_all' = '('features.aStatus'=='Applicable')',
+                          'check_circle' = '('features.aStatus'=='enabled')'
+                         }">
+            </i>
+     <i class="material-icons"
+              [ngClass]="{ 'not_interested' = ('features.aStatus'=='notApplicable'),
+                           'done_all' = '('features.aStatus'=='Applicable')',
+                           'check_circle' = '('features.aStatus'=='enabled')'
+                        }">
+            </i>
+
+
+  <li>Feature 1</li>
+        <li>Feature 2</li>
+        <li>Feature 3</li>
+        <li>Feature 4</li>
+
+
+  <div id="container">
+
+  <div class="version">
+      <div class="heading">
+        
+      </div>
+      <div class="features">
+          <ul>
+              <li>FEature 1</li>
+              <li>Feature 2</li>
+              <li>FEature 3</li>
+            </ul>
+      </div>
+    </div>
+
+  <div class="version">
+      <div class="heading">
+        
+      </div>
+      <div class="features">
+          <ul>
+              <li>FEature 1</li>
+              <li>Feature 2</li>
+              <li>FEature 3</li>
+              <li>Feature 4</li>
+            </ul>
+      </div>
+    </div>
+
+  <div class="version">
+      <div class="heading">
+        
+      </div>
+      <div class="features">
+          <ul>
+              <li>FEature 1</li>
+              <li>Feature 2</li>
+              <li>FEature 3</li>
+              
+            </ul>
+      </div>
+    </div>
+
+  -->
+  

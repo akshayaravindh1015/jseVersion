@@ -1,0 +1,14 @@
+#teams{
+    width: 100%;
+    display:flow-root;
+    margin-top:3%;
+   
+}
+#aquisition{
+    margin-left:8%;
+    float:left;
+}
+#servicing{
+    float:right;
+    margin-right:4%;
+}

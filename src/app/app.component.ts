@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Input,Output } from '@angular/core';
+import { AppVersionsService } from './appVersions.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'JSE-Versions';
+  allJSEVersions=[];
+  constructor(service:AppVersionsService){
+    this.allJSEVersions = service.getAllJSEVersions();
+  }
 }
